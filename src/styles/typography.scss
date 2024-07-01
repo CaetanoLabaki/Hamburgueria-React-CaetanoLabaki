@@ -1,0 +1,39 @@
+.title {
+    font-family: var(--font-primary);
+    font-weight: 700;
+    line-height: 1.5rem;
+    font-size: 1.125rem;
+    color: var(--color-foodName);
+
+    &.modal {      
+        color: var(--color-white);
+        line-height: 1.75rem;
+    }
+}
+
+.paragraph {
+    font-family: var(--font-primary);
+    font-weight: 400;
+    line-height: 1rem;
+    font-size: 0.75rem;
+    color: var(--color-foodType);
+
+    &.price {
+        font-weight: 600;
+        color: var(--color-primary);
+        line-height: 1.5rem;
+        font-size: 0.875rem;
+    }
+}
+
+.paragraphModal {
+    font-family: var(--font-primary);
+    color: var(--color-foodName);
+    font-size: 0.875rem;
+    font-weight: 600;
+    line-height: 1.5rem;
+
+    &.totalValue {
+        color: var(--color-foodType);
+    }   
+}

@@ -9,7 +9,7 @@ export const CartModal = ({ cartList }) => {
    return (
       <div role="dialog">
          <div>
-            <h2>Carrinho de compras</h2>
+            <h2 className="title modal">Carrinho de compras</h2>
             <button aria-label="close" title="Fechar">
                <MdClose size={21} />
             </button>
@@ -23,8 +23,8 @@ export const CartModal = ({ cartList }) => {
          </div>
          <div>
             <div>
-               <span>Total</span>
-               <span>{total.toLocaleString('pt-BR', { style: "currency", currency: "BRL"})}</span>
+               <span className="paragraphModal">Total</span>
+               <span className="paragraphModal totalValue">{total.toLocaleString('pt-BR', { style: "currency", currency: "BRL"})}</span>
             </div>
             <button>Remover todos</button>
          </div>

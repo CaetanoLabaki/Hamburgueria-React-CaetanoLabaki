@@ -1,0 +1,59 @@
+.modalOverlay {
+    position: fixed;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    inset: 0;
+    width: 100%;
+    height: 100vh;
+    background-color: rgba(0,0,0,.4);
+
+    .modalBox {
+        position: relative;
+        width: 100%;
+        max-width: 484px;        
+        background-color: var(--color-white);
+        border-radius: 0.5rem;
+
+        .modalHeader {
+            display: flex;
+            justify-content: space-between;
+            background-color: var(--color-primary);
+            padding: 1.125rem 0.875rem;
+            border-top-left-radius: 0.5rem;
+            border-top-right-radius: 0.5rem;
+        }
+
+        .carList {
+            display: flex;
+            flex-direction: column;
+            gap: 0.875rem;
+            padding: 0.875rem 1.9375rem 1.5rem 0.875rem;                      
+        }
+
+        .noproduct {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 1rem 0;
+        }
+
+        .botton {
+            display: flex;
+            flex-direction: column;
+            gap: 1.25rem;
+            margin: 0 0.875rem 1.125rem 0.875rem;
+            padding-top: 1rem;
+            border-top: 2px solid var(--color-cardBord);
+
+            .totalValue {
+                display: flex;
+                justify-content: space-between;
+            }
+        }
+    }   
+}
+

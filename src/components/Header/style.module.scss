@@ -1,0 +1,35 @@
+.header {
+    background-color: var(--color-imageBackground);
+}
+
+.flexBox {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.5rem 0;    
+}
+
+.carForm {
+    display: flex;
+    flex-direction: row-reverse;
+    gap: 2rem;    
+}
+
+.searchIcon {
+    display: flex;
+    align-items: center;
+    justify-content: center;   
+}
+
+.carNumber {
+    background-color: var(--color-primary);
+    border-radius: 0.4375rem;
+    padding: 0.3rem 0.3rem;
+    color: var(--color-white);
+}
+
+.carIcon {
+    color: var(--color-button);
+}
+
+

@@ -10,9 +10,9 @@ export const  useKeydown = (keyId, callback) => {
             }
         }
 
-        window.addEventListener("keydown", handleKeydown)
+        window.addEventListener("keydown", handleKeydown);
         return () => {
-            window.removeEventListener("keydown", handleKeydown)
+            window.removeEventListener("keydown", handleKeydown);
         }
     }, []);
 

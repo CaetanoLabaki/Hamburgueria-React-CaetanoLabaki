@@ -2,10 +2,8 @@ import styles from "./style.module.scss";
 
 export const ProductCard = ({ addFood, product }) => {
 
-
-
-
     return (
+        
         <li className={styles.card}>
             <div className={styles.cardImg}>
                 <img className={styles.img} src={product.img} alt={product.name} />

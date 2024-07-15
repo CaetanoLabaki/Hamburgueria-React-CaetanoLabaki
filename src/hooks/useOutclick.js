@@ -10,10 +10,10 @@ export const useOutclick = (callback) => {
             }
         }
 
-        window.addEventListener("mousedown", handleOutclick)
+        window.addEventListener("mousedown", handleOutclick);
 
         return () => {
-            window.removeEventListener("mousedown", handleOutclick)
+            window.removeEventListener("mousedown", handleOutclick);
         }
     }, [])
 

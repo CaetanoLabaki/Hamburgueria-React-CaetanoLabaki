@@ -1,9 +1,9 @@
 import { ProductCard } from "./ProductCard";
 import styles from "./style.module.scss";
 
-export const ProductList = ({ addFood, loading, productsResults}) => {
+export const ProductList = ({ addFood, loading, productsResults }) => {
    return (
-      <div className="container">         
+      <div className="container containerMobile">         
             {loading ? (
                <p>Carregando...</p>
             ) : (

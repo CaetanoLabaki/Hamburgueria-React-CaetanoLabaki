@@ -35,7 +35,12 @@ export const HomePage = () => {
    });   
 
    const addFood = (product) => {
-      setCartList([...cartList, product])
+      if(cartList.some(item => item.id === product.id)) {
+         alert("Esse produto ja foi inserido")
+      }
+      else { 
+         setCartList([...cartList, product])
+      }
    };
 
    const removeFood  = (productId) => {
@@ -47,18 +52,11 @@ export const HomePage = () => {
       localStorage.setItem("@MYLIST", JSON.stringify(cartList))
    }, [cartList]);
 
-   // useEffect montagem - carrega os produtos da API e joga em productList
-   // useEffect atualização - salva os produtos no localStorage (carregar no estado)
-   // adição, exclusão, e exclusão geral do carrinho
-   // renderizações condições e o estado para exibir ou não o carrinho
-   // filtro de busca
-   // estilizar tudo com sass de forma responsiva
-
    return (
       <>
          <Header setIsOpen={setIsOpen} cartList={cartList} setSearch={setSearch}/>
          <main>
-            <ProductList loading={loading} addFood={addFood} productsResults={productsResults} search={search}/>
+            <ProductList loading={loading} addFood={addFood} productsResults={productsResults} search={search} />
             {isOpen ? <CartModal cartList={cartList} removeFood={removeFood} setIsOpen={setIsOpen} setCartList={setCartList}/> : null}
          </main>
       </>

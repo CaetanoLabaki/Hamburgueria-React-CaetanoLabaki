@@ -1,18 +1,21 @@
 .header {
     background-color: var(--color-imageBackground);
+    width: 100%;
+       
 }
 
 .flexBox {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 1.5rem 0;    
+    padding: 1.5rem 1rem;    
 }
 
 .carForm {
     display: flex;
     flex-direction: row-reverse;
-    gap: 2rem;    
+    gap: 2rem;
+        
 }
 
 .searchIcon {
@@ -30,6 +33,13 @@
 
 .carIcon {
     color: var(--color-button);
+}
+
+@media (max-width: 700px) {
+    .header {
+        position: fixed;
+        top: 0;
+    }
 }
 
 

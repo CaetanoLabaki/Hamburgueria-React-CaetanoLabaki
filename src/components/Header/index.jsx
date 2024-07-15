@@ -1,7 +1,7 @@
 import { useState } from "react";
 import Logo from "../../assets/Logo.svg";
 import { MdSearch, MdShoppingCart } from "react-icons/md";
-import styles from "./style.module.scss"
+import styles from "./style.module.scss";
 
 export const Header = ({ setIsOpen,  cartList, setSearch }) => {
    const [value, setValue] = useState("");

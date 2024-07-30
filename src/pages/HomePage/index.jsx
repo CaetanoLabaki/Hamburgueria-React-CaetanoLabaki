@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import { CartModal } from "../../components/CartModal";
 import { Header } from "../../components/Header";
 import { ProductList } from "../../components/ProductList";
+import { api } from "../../services/api";
 
 
 export const HomePage = () => {
@@ -17,9 +18,8 @@ export const HomePage = () => {
       const loadData = async () => {
          try {
             setLoading(true);
-            const response  = await fetch ("https://hamburgueria-kenzie-json-serve.herokuapp.com/products");
-            const json = await response.json();            
-            setProductList(json);
+            const { data } = await api.get("/products")                      
+            setProductList(data);
          } catch (error) {
             console.log(error);
          } finally {
